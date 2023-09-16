@@ -22,7 +22,7 @@ This lab will introduce the Android Studio IDE and Android project structure thr
 	* Package name: ca.unb.mobiledev.lab1
 	* Language: Kotlin
 	* Minimum API Level: API 24 ("Nougat; Android 7.0)
-	* Leave the _Build configuration language_ option as the selected default (Kotlin DSL)
+	* For the _Build configuration language_ option select "(Groovy DSL)"
 * → Click **Finish**
 
 NOTES:
@@ -219,10 +219,10 @@ Android uses Gradle for dependency management and build tasks.  By default two G
 
 Now that we’re familiar with the _strings.xml_ resource file, let’s take a look at how to add locale-specific string support.  
 
-1. Right click the app/src/main/res directory and select New → Values Resource File
+1. Right click the app/src/main/res/values directory and select New → Values Resource File
 	* Enter **strings** in the File Name field
 	* From the Available Qualifiers select Locale and select the **>>** button
-	* In the language filter search for Spanish; this will set the list of chosen qualifiers to **en** and directory name as **values-es**
+	* In the language filter search for Spanish; this will set the list of chosen qualifiers to **es** and directory name as **values-es**
 	* Click **OK** to save
 	* Repeat the same process for French (fr)
 
@@ -280,8 +280,10 @@ Log.i(TAG, "This is a log display!")
 
 5. Run the application via the emulator or device once more
  	* Along the bottom portion of Android Studio, click the _Logcat_ tab
-	* Set the log-level dropdown to Info and search for MainActivity
-	* You'll be presented with a console log information that you built into the ```onCreate()``` function
+	* This section has been modified in recent versions to show the log levels by color and letter indicator
+	* In the query field you should see the running project name (in this case package:ca.unb.mobiledev.lab1) 
+	* Append the value _level:info_ to filter out some of the log messages
+		* Info messages will show as green with the letter _I_
 	* This tactic can be utilized throughout the development cycle to test certain portions of your code to know how an application is behaving and where in the Activity lifecycle your application may be encountering problems
 
 **Deliverable 6**
